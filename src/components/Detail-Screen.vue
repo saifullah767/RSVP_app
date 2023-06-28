@@ -83,8 +83,8 @@
           store.error_message = response.data
         })
         .catch((error) => {
-          store.enableNotification
-          store.error_message = error.data
+          store.enableNotification();
+          store.error_message = error.message
         })
       }
 

@@ -58,7 +58,23 @@
   import { defineProps } from 'vue';
   import PageHeading from './Page-Heading.vue'
   import { useRsvpApp } from '../store/store.js'
+  import { getEvents } from '../api/index.js'
 
   const store = useRsvpApp();
+
+  
+  getEvents()
+      .then(response => {
+        
+        store.events_data = response.data
+      
+      })
+      .catch(error => {
+      
+        console.log('error');
+        store.enableNotification();
+        store.error_message = 'Data is not showing because of '+ error.message
+      
+      });
     
   </script>
