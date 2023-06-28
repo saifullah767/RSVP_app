@@ -79,14 +79,12 @@
         store.events_data[eventIndex].rsvp = store.events_data[eventIndex].rsvp + 1 ;
         updateEvents(store.detail_screen_data.id, store.events_data[eventIndex])
         .then((response) => {
-  
-          console.log('update res::', response);
-  
+          store.enableNotification
+          store.error_message = response.data
         })
         .catch((error) => {
-  
-          console.log('update res::', error);
-          
+          store.enableNotification
+          store.error_message = error.data
         })
       }
 
