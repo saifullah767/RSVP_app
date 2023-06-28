@@ -1,11 +1,16 @@
 import { defineStore } from "pinia";
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 
 export const useRsvpApp = defineStore("rsvp", () => { 
 
     ////////////
     // STATES//
     ///////////
+
+    const user = reactive({
+        name: null,
+        email: null
+    });
 
     const is_detail_sceen = ref(false);
 
@@ -35,8 +40,10 @@ export const useRsvpApp = defineStore("rsvp", () => {
 
     return {
 
+        user,
         is_detail_sceen,
         detail_screen_data,
+
 
         enableDisable_DetailScreen
 
