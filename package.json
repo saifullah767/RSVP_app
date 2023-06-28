@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite && postcss ./src/styles.css -o ./dist/output.css --watch && json-server --watch cardsdetails.json --port 3000",
+    "dev": "vite && postcss ./src/styles.css -o ./dist/output.css --watch",
     "build": "vite build",
     "preview": "vite preview"
   },

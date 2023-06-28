@@ -42,7 +42,7 @@ export const useRsvpApp = defineStore("rsvp", () => {
 
         setTimeout(() => {
             is_notification.value = true;
-        }, 1500);
+        }, 5000);
     }
 
 
