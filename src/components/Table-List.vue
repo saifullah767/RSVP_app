@@ -20,7 +20,7 @@
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                  <tr v-for="event in props.event" :key="event.email">
+                  <tr v-for="event in store.events_data" :key="event">
                     <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">{{ event.title }}</td>
                     <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ event.date }}</td>
                     <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ event.time }}</td>
@@ -60,9 +60,5 @@
   import { useRsvpApp } from '../store/store.js'
 
   const store = useRsvpApp();
-
-    const props = defineProps({
-        event : null
-    });
     
   </script>

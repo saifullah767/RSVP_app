@@ -42,7 +42,9 @@
                             </div>
                         </div>
 
-                        <RESVPed />
+                        <RESVPed v-if="store.detail_screen_data.attendees" />
+
+                        <EmptyUser v-else />
                     </section>
                 </div>
                 <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
@@ -62,15 +64,32 @@
   import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
   import { ExclamationTriangleIcon,ClockIcon, CalendarDaysIcon, MapPinIcon } from '@heroicons/vue/24/outline'
   import RESVPed from './RSVPed.vue'
+  import EmptyUser from './Empty-User.vue'
   import { useRsvpApp } from '../store/store.js'
+  import { updateEvents } from '../api/index.js'
 
   const store = useRsvpApp();
 
+    const resvervation = () => {
+
+      const eventIndex = store.events_data.findIndex(event => event.id === store.detail_screen_data.id);
+
+      if (eventIndex !== -1){
+        store.events_data[eventIndex].attendees.push(store.user);
+        store.events_data[eventIndex].rsvp = store.events_data[eventIndex].rsvp + 1 ;
+        updateEvents(store.detail_screen_data.id, store.events_data[eventIndex])
+        .then((response) => {
   
-  const resvervation = () => {
+          console.log('update res::', response);
+  
+        })
+        .catch((error) => {
+  
+          console.log('update res::', error);
+          
+        })
+      }
 
-    console.log(store.detail_screen_data)
-
-  }
+    };
   
   </script>
