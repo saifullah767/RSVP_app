@@ -8,15 +8,15 @@ export const useRsvpApp = defineStore("rsvp", () => {
     ///////////
 
     const user = reactive({
-        name: 'saifullah',
-        email: 'sak@gmail.com'
+        name: null,
+        email: null
     });
 
     const is_detail_sceen = ref(false);
-
     const detail_screen_data = ref(null);
-
     const events_data = ref(null);
+    const is_notification = ref(false);
+    const error_message = ref('');
 
     ////////////
     //FUNCTION//
@@ -37,6 +37,14 @@ export const useRsvpApp = defineStore("rsvp", () => {
 
     }
 
+    function enableNotification () {
+        is_notification.value = true;
+
+        setTimeout(() => {
+            is_notification.value = true;
+        }, 1500);
+    }
+
 
 
 
@@ -46,8 +54,11 @@ export const useRsvpApp = defineStore("rsvp", () => {
         events_data,
         is_detail_sceen,
         detail_screen_data,
+        is_notification,
+        error_message,
 
-        enableDisable_DetailScreen
+        enableDisable_DetailScreen,
+        enableNotification
 
     }
 
