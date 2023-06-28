@@ -8,13 +8,15 @@ export const useRsvpApp = defineStore("rsvp", () => {
     ///////////
 
     const user = reactive({
-        name: null,
-        email: null
+        name: 'saifullah',
+        email: 'sak@gmail.com'
     });
 
     const is_detail_sceen = ref(false);
 
     const detail_screen_data = ref(null);
+
+    const events_data = ref(null);
 
     ////////////
     //FUNCTION//
@@ -41,9 +43,9 @@ export const useRsvpApp = defineStore("rsvp", () => {
     return {
 
         user,
+        events_data,
         is_detail_sceen,
         detail_screen_data,
-
 
         enableDisable_DetailScreen
 
