@@ -27,7 +27,7 @@
       "date": "2023-07-10",
       "time": "17:00",
       "location": "Innovation Hub, New York City",
-      "rsvp": 6,
+      "rsvp": 0,
       "attendees": []
     },
     {
@@ -47,7 +47,7 @@
       "date": "2023-07-20",
       "time": "14:30",
       "location": "Wellness Center, Vancouver",
-      "rsvp": 1,
+      "rsvp": 0,
       "attendees": []
     }
   ]
