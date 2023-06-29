@@ -7,13 +7,8 @@
       "date": "2023-07-01",
       "time": "18:00",
       "location": "Tech Hub Convention Center, San Francisco",
-      "rsvp": 1,
-      "attendees": [
-        {
-          "name": "Mahnoor Afza",
-          "email": "Mahnir@gmail.com"
-        }
-      ]
+      "rsvp": 2,
+      "attendees": []
     },
     {
       "id": 2,
@@ -23,12 +18,7 @@
       "time": "19:30",
       "location": "Sunset Park, Miami",
       "rsvp": 0,
-      "attendees": [
-        {
-          "name": "saifullah",
-          "email": "sak@gmail.com"
-        }
-      ]
+      "attendees": []
     },
     {
       "id": 3,
@@ -38,32 +28,7 @@
       "time": "17:00",
       "location": "Innovation Hub, New York City",
       "rsvp": 6,
-      "attendees": [
-        {
-          "name": "saifullah",
-          "email": "sak@gmail.com"
-        },
-        {
-          "name": "saifullah",
-          "email": "sak@gmail.com"
-        },
-        {
-          "name": "saifullah",
-          "email": "sak@gmail.com"
-        },
-        {
-          "name": "saifullah",
-          "email": "sak@gmail.com"
-        },
-        {
-          "name": "saifullah",
-          "email": "sak@gmail.com"
-        },
-        {
-          "name": "saifullah",
-          "email": "sak@gmail.com"
-        }
-      ]
+      "attendees": []
     },
     {
       "id": 4,
@@ -83,12 +48,7 @@
       "time": "14:30",
       "location": "Wellness Center, Vancouver",
       "rsvp": 1,
-      "attendees": [
-        {
-          "name": "Mahnoor Afza",
-          "email": "Mahnir@gmail.com"
-        }
-      ]
+      "attendees": []
     }
   ]
 }
